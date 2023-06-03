@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
+import {GrAnnounce} from "react-icons/gr";
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
@@ -30,16 +31,17 @@ const NavBar = () => {
   return (
     
 
-    <div className="flex justify-between items-center w-full h-20 px-6 text-white bg-black ">
-      <div className='px-10'>
-        <h1 className="text-2xl font-signature ml-2">Udyogashala</h1>
+    <div className="flex justify-between items-center w-full h-20 px-6 border-gray-100 shadow-lg bg-white ">
+      <div className='px-0 md:px-10 flex flex-row cursor-pointer'>
+        <p className="text-3xl md:ml-2  text-gray-700 font-semibold hover:text-gray-600 duration-300">Udyogashala</p>
+        <span className='m-1 text-white'><GrAnnounce size={25} color={"white"} /></span>
       </div>
 
       <ul className="hidden md:flex">
         {links.map(({ id, name }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:text-gray-200 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer capitalize font-medium text-gray-600 hover:text-gray-800 hover:scale-105 duration-200"
           >
             <Link to={name} smooth duration={500}>
               {name}
